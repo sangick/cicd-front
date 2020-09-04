@@ -62,7 +62,11 @@ containerTemplate(name: 'kubectl', image: 'roffe/kubectl', command: 'cat', ttyEn
 				sh "kubectl apply -n ${namespace} -f ${service}"
 				sh "kubectl get svc -n ${namespace}"
 			}
-		}		// Slack - 빌드 성공시	} catch(e) {
-		// Slack - 빌드 실패시	}
+		}		
+		// Slack - 빌드 성공시	
+	} catch(e) 
+	  {
+		// Slack - 빌드 실패시	
+	  }
   }
 }
