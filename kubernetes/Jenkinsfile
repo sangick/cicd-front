@@ -1,4 +1,5 @@
-def label = "worker-${UUID.randomUUID().toString()}"// Slack 알림podTemplate(label: label, containers: [
+def label = "worker-${UUID.randomUUID().toString()}"// Slack 알림
+podTemplate(label: label, containers: [
 // #0 필요한 Pod생성
 //빌드에 사용할 패키지에 따라 다른 template을 사용합니다.
 containerTemplate(name: 'npm', image: 'node:lts', command: 'cat', ttyEnabled: true),
