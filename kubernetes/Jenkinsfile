@@ -12,7 +12,7 @@ containerTemplate(name: 'kubectl', image: 'roffe/kubectl', command: 'cat', ttyEn
 	try {
 		// Slack - 빌드 시작시		// #1 Github 소스 가져오기
 		stage('Get Source') {
-		   git credentialsId: '{github-lab05}', url: '{https://github.com/sangick/cicd-front/}', branch: 'master'
+		   git credentialsId: 'github-lab05', url: 'https://github.com/sangick/cicd-front/', branch: 'master'
 		}
 		// #2 Properties 파일 읽기	
 		def props = readProperties file:"./kubernetes/pipeline.properties"
