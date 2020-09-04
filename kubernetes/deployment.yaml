@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: frontend-kisjang
+      app: frontend-lab05
   replicas: 1
   template:
     metadata:
