@@ -65,8 +65,3 @@ containerTemplate(name: 'kubectl', image: 'roffe/kubectl', command: 'cat', ttyEn
 		// Slack - 빌드 실패시	}
   }
 }
-
-
-
-
-
